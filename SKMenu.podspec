@@ -21,8 +21,9 @@ Customized menu component for ios with color transforming animation, up on selec
   s.source           = { :git => 'https://github.com/vensan7888/SKMenu.git', :tag => s.version.to_s }
   s.social_media_url = 'https://about.me/venu.medidi'
 
-  s.ios.deployment_target = '9.0'
+	s.platform         = :ios, '9.0'
+	s.swift_version    = '5.0'
 
-  s.source_files = 'SKMenu/Sources/**/*'
+  s.source_files = 'Sources/**/*'
 
 end
