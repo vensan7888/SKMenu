@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selected View Controller-->
+        <scene sceneID="GPv-u4-jUy">
+            <objects>
+                <viewController storyboardIdentifier="Selected" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qgx-iR-2DU" customClass="SelectedViewController" customModule="SKMenu_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Je-Th-b2i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v98-g5-53c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4C-HF-MDK">
+                                <rect key="frame" x="144.5" y="414.5" width="125" height="77"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.29107064260563381" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="4"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v98-g5-53c" firstAttribute="top" secondItem="0Je-Th-b2i" secondAttribute="top" id="0Yg-1z-tQq"/>
+                            <constraint firstAttribute="bottom" secondItem="v98-g5-53c" secondAttribute="bottom" id="74Y-wI-uDE"/>
+                            <constraint firstItem="I4C-HF-MDK" firstAttribute="centerX" secondItem="sAZ-7C-Bgo" secondAttribute="centerX" id="Ez2-g7-2eE"/>
+                            <constraint firstItem="sAZ-7C-Bgo" firstAttribute="trailing" secondItem="v98-g5-53c" secondAttribute="trailing" id="Sut-Ee-gZc"/>
+                            <constraint firstItem="v98-g5-53c" firstAttribute="leading" secondItem="sAZ-7C-Bgo" secondAttribute="leading" id="Wyf-Fc-csa"/>
+                            <constraint firstItem="I4C-HF-MDK" firstAttribute="centerY" secondItem="sAZ-7C-Bgo" secondAttribute="centerY" id="iXv-ZE-03Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sAZ-7C-Bgo"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="v98-g5-53c" id="xRA-O7-7vv"/>
+                        <outlet property="titleLabel" destination="I4C-HF-MDK" id="L5j-bt-T1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfq-Ee-N6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244.9275362318842" y="-564.50892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SKMenu_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fBK-aO-Y6i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.18840579710147" y="-565.17857142857144"/>
+        </scene>
+    </scenes>
+</document>
