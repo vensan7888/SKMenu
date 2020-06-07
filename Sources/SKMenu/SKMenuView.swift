@@ -58,7 +58,7 @@ public class SKMenuView: UIView {
 	/// - Parameter index: index of the menu item
 	public func selectMenuItem(at index: Int) {
 		guard let source = self.dataSource, let count = self.dataSource?.menuViewNumberofItems(self),
-			selectedIndex < count, selectedIndex != index else {
+			index < count, selectedIndex != index else {
 				return
 		}
 		selectedIndex = index
@@ -73,19 +73,11 @@ public class SKMenuView: UIView {
 	}
 
 	override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-		guard let source = self.dataSource, let touch = touches.first else {
+		guard let touch = touches.first else {
 			return
 		}
 		let touchPoint = touch.location(in: self)
-		let size = self.scaledItemSize(source: source)
-		var spacing = self.minimumItemSpacing()
-		spacing = spacing > 1.0 ? spacing : 1.0
-		var touchItem = 0
-		if layout == .horizontal {
-			touchItem = Int(touchPoint.x/(size.width + spacing))
-		} else {
-			touchItem = Int(touchPoint.y/(size.height + spacing))
-		}
-		selectMenuItem(at: touchItem)
+		let index = self.indexFor(touchPoint: touchPoint)
+		selectMenuItem(at: index)
 	}
 }

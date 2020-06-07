@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SKMenu'
-  s.version          = '0.0.2'
+  s.version          = '0.0.2.1'
   s.summary          = 'SKMenu'
 
   s.description      = <<-DESC

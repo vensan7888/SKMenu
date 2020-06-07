@@ -166,6 +166,25 @@ extension SKMenuView {
 		}
 	}
 
+	func indexFor(touchPoint: CGPoint) -> Int {
+		guard let source = self.dataSource else {
+			return 0
+		}
+		let size = self.scaledItemSize(source: source)
+		let spacing = self.minimumItemSpacing()
+		let count = source.menuViewNumberofItems(self)
+		var index = 0
+		if layout == .horizontal {
+			index = Int(touchPoint.x/(size.width + spacing))
+		} else {
+			index = Int(touchPoint.y/(size.height + spacing))
+		}
+		if index >= count {
+			index = count - 1
+		}
+		return index
+	}
+
 	func targetPoint(to index: Int, source: SKMenuViewDataSource) -> CGPoint {
 		let spacing = self.minimumItemSpacing()
 		var targetPoint: CGPoint = CGPoint(x: 0, y: 0)
